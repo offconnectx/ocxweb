@@ -21,23 +21,23 @@ const AboutUs = () => {
             <div className="w-full flex-col justify-center items-start gap-8 flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                 <h2 className="text-blue-800 text-xl font-semibold font-mono leading-normal lg:text-start text-center">
-                  Why OCX?
+                  {`Why OCX?`}
                 </h2>
                 <h2 className="text-gray-900 text-4xl font-bold font-mono leading-normal lg:text-start text-center">
                   Redefining Offline Payments
                 </h2>
                 <p className="text-gray-500 text-base font-mono leading-relaxed lg:text-start text-center">
-                  OCX allows users to perform secure financial transactions even
+                  {`OCX allows users to perform secure financial transactions even
                   when they don’t have access to the internet. Whether you're in
                   an area with poor connectivity, traveling, or simply without a
                   signal, the app ensures your payments are processed seamlessly
-                  and stored securely until you're back online.
+                  and stored securely until you're back online.`}
                 </p>
               </div>
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
                 <div className="flex-col justify-start items-start inline-flex">
                   <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                    33+
+                    {`33+`}
                   </h3>
                   <h6 className="text-gray-500 text-base font-mono leading-relaxed">
                     Offline Payments
@@ -45,7 +45,7 @@ const AboutUs = () => {
                 </div>
                 <div className="flex-col justify-start items-start inline-flex">
                   <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                    125+
+                    {`125+`}
                   </h4>
                   <h6 className="text-gray-500 text-base font-mono leading-relaxed">
                     Secure and Reliable
@@ -53,7 +53,7 @@ const AboutUs = () => {
                 </div>
                 <div className="flex-col justify-start items-start inline-flex">
                   <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                    52+
+                    {`52+`}
                   </h4>
                   <h6 className="text-gray-500 text-base font-mono leading-relaxed">
                     Automatic Syncing

@@ -8,20 +8,20 @@ const Header = () => {
       <div className="flex items-center justify-between mx-auto max-w-6xl py-16 gap-x-10">
         <div className="flex flex-col gap-y-10">
           <p className="text-5xl font-mono font-bold">
-            Offline transactions with speed and reliability.
+            {`Offline transactions with speed and reliability.`}
           </p>
           <p className="text-lg font-mono text-gray-600">
-            Our app ensures that your payments remain seamless, even without
+            {`Our app ensures that your payments remain seamless, even without
             internet access. Whether you're in remote areas or experiencing
             network disruptions, you can rely on fast, secure, and efficient
-            transactions.
+            transactions.`}
           </p>
           <GooglePlayDownloadButton />
 
           <br />
           <div className="flex items-center">
             <p className="text-gray-600 text-xl font-mono align-bottom">
-              Built on{" "}
+              {`Built on `}
             </p>
             <Link href={"https://lisk.com/"}>
               <Image height={100} width={100} src={"/lisk.png"} alt="" />
