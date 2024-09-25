@@ -1,7 +1,5 @@
 'use client';
 import { useState } from "react"; // Import the useState hook
-import Image from "next/image";
-import Link from "next/link";
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to handle menu visibility
@@ -23,7 +21,7 @@ const NavigationBar = () => {
   );
 };
 
-const ToggleMenuButton = (props: { toggleMenu: VoidFunction, isMenuOpen: Boolean }) => {
+const ToggleMenuButton = (props: { toggleMenu: VoidFunction, isMenuOpen: boolean }) => {
   return (
     <button
       onClick={props.toggleMenu} // Attach the toggle function to the onClick event
@@ -52,7 +50,7 @@ const ToggleMenuButton = (props: { toggleMenu: VoidFunction, isMenuOpen: Boolean
   );
 };
 
-const Menu = (props: { isMenuOpen: Boolean }) => {
+const Menu = (props: { isMenuOpen: boolean }) => {
   return (
     <div
       className={`${
