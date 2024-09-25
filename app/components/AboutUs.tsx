@@ -35,15 +35,15 @@ const AboutUs = () => {
                 </p>
               </div>
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
-                <div className="flex-col justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="52" height="52"><path d="M23.56,23.56c-.29,.29-.68,.44-1.06,.44s-.77-.15-1.06-.44L.44,2.56C-.15,1.97-.15,1.03,.44,.44S1.97-.15,2.56,.44l3.64,3.64c5.86-2.27,12.63-.87,17.11,3.6,.09,.09,.18,.18,.27,.28,.57,.6,.55,1.55-.05,2.12-.29,.28-.66,.42-1.04,.42-.4,0-.79-.16-1.09-.46l-.22-.22c-3.32-3.32-8.18-4.55-12.62-3.35l3.55,3.55c2.34,.04,4.58,.97,6.24,2.63,.59,.58,.59,1.54,0,2.12-.29,.29-.67,.44-1.05,.44l6.24,6.24c.59,.59,.59,1.54,0,2.12Zm-11.56-6.56c-1.1,0-2,.9-2,2s.9,2,2,2,2-.9,2-2-.9-2-2-2Zm-6-4.71c-.12,.11-.24,.22-.36,.34-.59,.58-.59,1.53,0,2.12,.29,.29,.68,.44,1.06,.44s.77-.15,1.06-.44c.08-.08,.16-.16,.24-.23,.62-.55,.67-1.5,.12-2.12-.55-.62-1.5-.67-2.12-.12ZM.97,7.41c-.1,.09-.19,.18-.28,.27-.09,.09-.18,.19-.27,.28-.57,.6-.55,1.55,.05,2.12,.29,.28,.66,.42,1.04,.42,.4,0,.79-.16,1.09-.46l.45-.45c.6-.57,.63-1.52,.06-2.12s-1.52-.63-2.12-.06Z"/></svg>
+                <div className="flex-col justify-center items-center gap-y-10">
+                  <svg className="mx-auto mb-4"  xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="52" height="52"><path d="M23.56,23.56c-.29,.29-.68,.44-1.06,.44s-.77-.15-1.06-.44L.44,2.56C-.15,1.97-.15,1.03,.44,.44S1.97-.15,2.56,.44l3.64,3.64c5.86-2.27,12.63-.87,17.11,3.6,.09,.09,.18,.18,.27,.28,.57,.6,.55,1.55-.05,2.12-.29,.28-.66,.42-1.04,.42-.4,0-.79-.16-1.09-.46l-.22-.22c-3.32-3.32-8.18-4.55-12.62-3.35l3.55,3.55c2.34,.04,4.58,.97,6.24,2.63,.59,.58,.59,1.54,0,2.12-.29,.29-.67,.44-1.05,.44l6.24,6.24c.59,.59,.59,1.54,0,2.12Zm-11.56-6.56c-1.1,0-2,.9-2,2s.9,2,2,2,2-.9,2-2-.9-2-2-2Zm-6-4.71c-.12,.11-.24,.22-.36,.34-.59,.58-.59,1.53,0,2.12,.29,.29,.68,.44,1.06,.44s.77-.15,1.06-.44c.08-.08,.16-.16,.24-.23,.62-.55,.67-1.5,.12-2.12-.55-.62-1.5-.67-2.12-.12ZM.97,7.41c-.1,.09-.19,.18-.28,.27-.09,.09-.18,.19-.27,.28-.57,.6-.55,1.55,.05,2.12,.29,.28,.66,.42,1.04,.42,.4,0,.79-.16,1.09-.46l.45-.45c.6-.57,.63-1.52,.06-2.12s-1.52-.63-2.12-.06Z"/></svg>
                   <h6 className="text-gray-500 text-base font-mono leading-relaxed">
                     Offline Payments
                   </h6>
                 </div>
-                <div className="flex-col justify-start items-start inline-flex">
+                <div className="flex-col justify-center items-center inline-flex">
                   <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                  <svg fill="#000000" height="42px" width="52px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
+                  <svg className="mx-auto mb-4" fill="#000000" height="52px" width="52px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
 	 viewBox="0 0 229.5 229.5">
 <path d="M214.419,32.12c-0.412-2.959-2.541-5.393-5.419-6.193L116.76,0.275c-1.315-0.366-2.704-0.366-4.02,0L20.5,25.927
 	c-2.878,0.8-5.007,3.233-5.419,6.193c-0.535,3.847-12.74,94.743,18.565,139.961c31.268,45.164,77.395,56.738,79.343,57.209
@@ -58,9 +58,9 @@ const AboutUs = () => {
                     Secure and Reliable
                   </h6>
                 </div>
-                <div className="flex-col justify-start items-start inline-flex">
+                <div className="flex-col justify-center items-center inline-flex">
                   <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
-                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" 
+                  <svg className="mx-auto mb-4" version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" 
 	 width="52px" height="52px" viewBox="0 0 32 32">
 {/* <style type="text/css">
 	.stone_een{fill:#111918;}
