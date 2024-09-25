@@ -2,7 +2,7 @@ const GooglePlayDownloadButton = () => {
   return (
     <button
       type="button"
-      className="flex items-center justify-center w-48 text-white bg-black rounded-lg h-14"
+      className="flex items-center justify-center md:mx-0 mx-auto w-48 text-white bg-black rounded-lg h-14"
     >
       <div className="mr-3">
         <svg viewBox="30 336.7 120.9 129.2" width="30">

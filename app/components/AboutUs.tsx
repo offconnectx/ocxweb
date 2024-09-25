@@ -6,13 +6,13 @@ const AboutUs = () => {
           <div className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
             <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
               <img
-                className=" rounded-xl object-cover"
+                className=" rounded-xl md:w-10/12 w-1/2 object-cover"
                 src="/mock_3.png"
                 alt="about Us image"
               />
             </div>
             <img
-              className="sm:ml-0 ml-auto rounded-xl object-cover"
+              className="sm:ml-0 ml-auto md:w-10/12 w-1/2 rounded-xl object-cover"
               src="/mock_4.png"
               alt="about Us image"
             />

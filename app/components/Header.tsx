@@ -5,7 +5,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="w-full bg-gradient-to-r from-white to-pink-200 rounded-3xl">
-      <div className="flex flex-col md:flex-row items-center justify-between mx-auto max-w-6xl py-8 md:py-16 gap-y-10 md:gap-x-10">
+      <div className="flex flex-col md:flex-row items-center justify-between mx-auto   md:max-w-6xl py-8 md:py-24 gap-y-10 md:gap-x-10">
         <div className="flex flex-col gap-y-6 md:gap-y-10 text-center md:text-left">
           <p className="text-3xl md:text-5xl font-mono font-bold">
             {`Offline transactions with speed and reliability.`}
@@ -24,16 +24,17 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center md:justify-end">
+        {/* <div className="flex justify-center md:justify-end"> */}
           <Image
-            height={300}
-            width={300}
+            className = "md:w-full w-10/12"
+            height={500}
+            width={500}
             // md:height={450}
             // md:width={450}
             src="/mock_1.png"
             alt="App Mockup"
           />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );
