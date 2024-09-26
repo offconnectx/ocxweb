@@ -1,6 +1,7 @@
 import AboutUs from "./components/AboutUs";
 import Header from "./components/Header";
 import NavigationBar from "./components/NavigationBar";
+import Features from "./components/Features";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <NavigationBar />
       <Header />
       <AboutUs />
+      <Features/>
     </main>
   );
 }
