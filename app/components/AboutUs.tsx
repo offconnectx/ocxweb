@@ -81,7 +81,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+            <button className="sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
               <span className="px-4  text-white font-mono text-md font-semibold leading-8">
                 Download
               </span>

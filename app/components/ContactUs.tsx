@@ -27,7 +27,11 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Send</button>
+                <button className="flex mx-auto sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+                    <span className="px-4  text-white font-mono text-md font-semibold leading-8">
+                        Send
+
+                    </span></button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
               </div>
