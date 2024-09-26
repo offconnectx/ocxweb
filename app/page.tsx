@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import NavigationBar from "./components/NavigationBar";
 import Features from "./components/Features";
 import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutUs />
       <Features/>
       <ContactUs/>
+      <Footer/>
     </main>
   );
 }
