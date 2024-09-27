@@ -21,13 +21,13 @@ const AboutUs = () => {
             <div className="w-full flex-col justify-center items-start gap-8 flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                 <h2 className="text-blue-800 text-xl font-semibold font-mono leading-normal lg:text-start text-center">
-                  {`Why OCX?`}
+                  {`Why OffConnectX?`}
                 </h2>
                 <h2 className="text-gray-900 text-4xl font-bold font-mono leading-normal lg:text-start text-center">
                   Redefining Offline Payments
                 </h2>
                 <p className="text-gray-500 text-base font-mono leading-relaxed lg:text-start text-center">
-                  {`OCX allows users to perform secure financial transactions even
+                  {`OffConnectX allows users to perform secure financial transactions even
                   when they don’t have access to the internet. Whether you're in
                   an area with poor connectivity, traveling, or simply without a
                   signal, the app ensures your payments are processed seamlessly

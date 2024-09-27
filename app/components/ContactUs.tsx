@@ -4,7 +4,7 @@ const ContactUs = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">We’d Love to Hear From You!</p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">{`We’d Love to Hear From You!`}</p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <div className="flex flex-wrap -m-2">
@@ -30,7 +30,6 @@ const ContactUs = () => {
                 <button className="flex mx-auto sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                     <span className="px-4  text-white font-mono text-md font-semibold leading-8">
                         Send
-
                     </span></button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">

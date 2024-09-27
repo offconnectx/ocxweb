@@ -5,7 +5,7 @@ const Features = () => {
     <div className="text-center mb-20">
       <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Our Features:
       Revolutionizing Offline Transactions</h1>
-      <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">In today's hyper-connected world, <span className="font-semibold text-blue-500">OffConnectX</span> stands out by enabling transactions without the need for internet access. This innovation tackles some of the most frustrating issues users face, such as the ones listed below:</p>
+      <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">{`In today's hyper-connected world,`}<span className="font-semibold text-blue-500">OffConnectX</span>{` stands out by enabling transactions without the need for internet access. This innovation tackles some of the most frustrating issues users face, such as the ones listed below:`}</p>
     </div>
     <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
       <div className="p-2 sm:w-1/2 w-full">
