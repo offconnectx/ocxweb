@@ -21,13 +21,13 @@ const AboutUs = () => {
             <div className="w-full flex-col justify-center items-start gap-8 flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                 <h2 className="text-blue-800 text-xl font-semibold font-mono leading-normal lg:text-start text-center">
-                  {`Why OCX?`}
+                  {`Why OffConnectX?`}
                 </h2>
                 <h2 className="text-gray-900 text-4xl font-bold font-mono leading-normal lg:text-start text-center">
                   Redefining Offline Payments
                 </h2>
                 <p className="text-gray-500 text-base font-mono leading-relaxed lg:text-start text-center">
-                  {`OCX allows users to perform secure financial transactions even
+                  {`OffConnectX allows users to perform secure financial transactions even
                   when they don’t have access to the internet. Whether you're in
                   an area with poor connectivity, traveling, or simply without a
                   signal, the app ensures your payments are processed seamlessly
@@ -81,7 +81,7 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <button className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+            <button className="sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
               <span className="px-4  text-white font-mono text-md font-semibold leading-8">
                 Download
               </span>

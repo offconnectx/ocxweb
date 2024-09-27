@@ -1,13 +1,13 @@
-import AboutUs from "./components/AboutUs";
-import Header from "./components/Header";
 import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
+import LandingPage from "./components/LandingPage";
 
 export default function Home() {
   return (
     <main className="w-screen h-screen">
       <NavigationBar />
-      <Header />
-      <AboutUs />
+      <LandingPage />
+      <Footer/>
     </main>
   );
 }
