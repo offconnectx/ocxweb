@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react"; // Import the useState hook
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'; //npm i react-scroll & npm i --save-dev @types/react-scroll
+import { Link as ScrollLink} from 'react-scroll'; //npm i react-scroll & npm i --save-dev @types/react-scroll
 
 
 const NavigationBar = () => {
