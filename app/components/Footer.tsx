@@ -4,7 +4,7 @@ const Footer = () => {
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a href="https://offconnect.io/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
     <img src="/off.png" className="h-8" alt="Logo" />
-      <span className="ml-3 text-xl">OffConnectX</span>
+      <span className="ml-3 text-xl dark:text-white">OffConnectX</span>
     </a>
     <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">{`© 2024 OffConnectX`}
     </p>

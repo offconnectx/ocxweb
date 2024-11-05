@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="w-full bg-gradient-to-r from-white to-blue-400 dark:from-[#4a8691] dark:to-[#244f6b]">
+    <div className="w-full bg-gradient-to-r from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b]">
+      {/* 346f91 */}
       <div className="flex flex-col md:flex-row items-center justify-between mx-auto md:max-w-6xl py-8 md:py-24 gap-y-10 md:gap-x-10">
         <div className="flex flex-col gap-y-6 md:gap-y-10 text-center md:text-left">
           <p className="text-3xl md:text-5xl font-mono font-bold dark:text-[#f0f4f8]">
