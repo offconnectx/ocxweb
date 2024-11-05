@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="text-white dark:bg-[#244f6b] bg-blue-600  body-font">
+        <footer className="text-white dark:bg-[#244f6b] md:dark:bg-[#244f6b]  bg-blue-600  body-font">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a href="https://offconnect.io/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
     <img src="/off.png" className="h-8" alt="Logo" />

@@ -59,7 +59,7 @@ const Menu = (props: { isMenuOpen: boolean }) => {
       } w-full md:block md:w-auto`} // Dynamically change the class based on state
       id="navbar-default"
     >
-      <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#244f6b] md:dark:bg-[#244f6b] dark:border-[#244f6b]">
+      <ul className="transparent font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#244f6b] md:dark:bg-[#244f6b] dark:border-[#244f6b]">
         <li>
           <ScrollLink 
             to="/" 

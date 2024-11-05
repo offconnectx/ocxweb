@@ -1,6 +1,6 @@
 const Features = () => {
     return (
-        <section id="features" className="dark:text-white text-gray-600 body-font dark:bg-[#244f6b]">
+        <section id="features" className="dark:text-white text-gray-600 body-font bg-gradient-to-b from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b]">
   <div className="container px-5 py-24 mx-auto">
     <div className="text-center mb-20">
       <h1 className="sm:text-3xl text-2xl font-medium text-center title-font dark:text-[#c4d4e0]  text-gray-900 mb-4">Our Features:
