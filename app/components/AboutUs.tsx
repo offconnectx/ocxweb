@@ -1,8 +1,12 @@
 "use client"
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const AboutUs = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -53,7 +57,8 @@ const AboutUs = () => {
   return (
     <motion.section
       initial="hidden"
-      animate="visible"
+      animate={isInView ? "visible" : "hidden"}
+      ref={sectionRef}
       variants={containerVariants}
       className="py-24 relative bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91]"
     >

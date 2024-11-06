@@ -2,9 +2,15 @@
 import Image from "next/image";
 import GooglePlayDownloadButton from "./GooglePlayDownloadButton";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+
 
 const Header = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -52,11 +58,13 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b]">
+    <div
+    ref={sectionRef}
+     className="w-full bg-gradient-to-b from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b]">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        animate={isInView ? "visible" : "hidden"}
         className="flex flex-col md:flex-row items-center justify-between mx-auto md:max-w-6xl py-8 md:py-24 gap-y-10 md:gap-x-10"
       >
         <div className="flex flex-col gap-y-6 md:gap-y-10 text-center md:text-left">
