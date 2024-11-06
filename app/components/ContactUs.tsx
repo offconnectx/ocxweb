@@ -67,7 +67,7 @@ const ContactUs = () => {
             Contact Us
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base dark:text-[#c4d4e0]">
-            We'd Love to Hear From You!
+            {`We'd Love to Hear From You!`}
           </p>
         </motion.div>
 

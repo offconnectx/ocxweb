@@ -103,11 +103,11 @@ const AboutUs = () => {
                   Redefining Offline Payments
                 </h2>
                 <p className="dark:text-white text-gray-500 text-base font-mono leading-relaxed lg:text-start text-center">
-                  OffConnectX allows users to perform secure financial transactions even
+                  {`OffConnectX allows users to perform secure financial transactions even
                   when they don't have access to the internet. Whether you're in
                   an area with poor connectivity, traveling, or simply without a
                   signal, the app ensures your payments are processed seamlessly
-                  and stored securely until you're back online.
+                  and stored securely until you're back online.`}
                 </p>
               </motion.div>
               
