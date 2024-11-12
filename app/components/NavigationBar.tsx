@@ -61,7 +61,7 @@ const NavigationBar = () => {
       initial="hidden"
       animate={isScrolled ? "visible" : "hidden"}
       variants={navVariants}
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-300 s${
         isScrolled 
           ? 'dark:bg-[#244f6b] py-2' 
           : 'dark:bg-transparent py-4'
@@ -139,6 +139,8 @@ const NavigationBar = () => {
         </motion.div>
       </div>
     </motion.nav>
+   
+    
   );
 };
 
