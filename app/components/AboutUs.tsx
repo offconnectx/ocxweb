@@ -5,10 +5,10 @@ import { useRef } from 'react';
 
 const AboutUs = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -60,7 +60,7 @@ const AboutUs = () => {
       animate={isInView ? "visible" : "hidden"}
       ref={sectionRef}
       variants={containerVariants}
-      className="py-24 relative bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91]"
+      className="py-24 relative bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">

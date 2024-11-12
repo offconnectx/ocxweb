@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 const Footer = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },

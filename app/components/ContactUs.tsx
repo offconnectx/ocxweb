@@ -5,10 +5,10 @@ import { useRef } from 'react';
 
 const ContactUs = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -51,7 +51,7 @@ const ContactUs = () => {
     <section 
       ref={sectionRef}
       id="contact" 
-      className="text-gray-600 bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91] body-font relative"
+      className="text-gray-600 bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91] body-font relative transition-colors duration-300"
     >
       <motion.div 
         className="container px-5 py-24 mx-auto"

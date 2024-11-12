@@ -5,10 +5,10 @@ import { useRef } from 'react';
 
 const Features = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
@@ -59,7 +59,7 @@ const Features = () => {
       variants={containerVariants}
       ref={sectionRef}
       id="features"
-      className="dark:text-white text-gray-600 body-font bg-gradient-to-b from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b]"
+      className="dark:text-white text-gray-600 body-font bg-gradient-to-b from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b] transition-colors duration-300"
     >
       <div className="container px-5 py-24 mx-auto">
         <motion.div 
