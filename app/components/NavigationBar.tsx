@@ -88,7 +88,8 @@ const NavigationBar = () => {
         <ToggleMenuButton toggleMenu={() => setIsMenuOpen(!isMenuOpen)} isMenuOpen={isMenuOpen} />
         
         <motion.div
-          className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
+          className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto 
+            ${isMenuOpen ? "bg-white dark:bg-[#244f6b] md:bg-transparent absolute top-full left-0 right-0 shadow-lg md:shadow-none md:relative" : ""}`}
           initial="hidden"
           animate="visible"
         >

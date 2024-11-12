@@ -6,7 +6,7 @@ import Header from "./Header";
 const LandingPage = () => {
   return (
     <>
-      <Header />
+      <Header  />
       <AboutUs />
       <Features/>
       <ContactUs/>
