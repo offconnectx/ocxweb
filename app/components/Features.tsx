@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const Features = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
 
   const containerVariants = {
     hidden: { opacity: 1 },
