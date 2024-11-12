@@ -1,7 +1,8 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link as ScrollLink } from 'react-scroll';
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import Image from "next/image";
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,7 +76,14 @@ const NavigationBar = () => {
           initial="hidden"
           animate="visible"
         >
-          <img src="/off.png" className="h-10" alt="Logo" /> 
+            <Image
+            height={50}
+            width={50}
+            src="/off.png"
+            alt="Logo"
+            className=""
+          />          
+          
           <span className={`text-2xl font-semibold ${
             isScrolled 
               ? 'text-gray-800 dark:text-white' 
