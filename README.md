@@ -38,3 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 <!-- install react-scroll -->
 
 <!-- npm i --save-dev @types/react-scroll -->
+<!-- npm install framer-motion -->
