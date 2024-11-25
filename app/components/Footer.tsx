@@ -44,7 +44,7 @@ const Footer = () => {
       animate="visible"
       ref={sectionRef}
       viewport={{ once: true, amount: 0.2 }}
-      className="bg-gradient-to-b from-[#f6f7fc] to-[#f6f7fc] dark:from-[#356f91] dark:to-[#244f6b] transition-colors duration-300"
+      className="bg-gradient-to-b from-[#f6f7fc] to-[#f6f7fc] dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
       <motion.div 
         variants={containerVariants}

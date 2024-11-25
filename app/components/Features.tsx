@@ -46,7 +46,7 @@ const Features = () => {
       variants={containerVariants}
       ref={sectionRef}
       id="features"
-      className="dark:text-white text-gray-600 body-font bg-gradient-to-b from-[#f6f7fc] to-[#f6f7fc] dark:from-[#356f91] dark:to-[#244f6b] transition-colors duration-300"
+      className="dark:text-white text-gray-600 body-font bg-gradient-to-b from-[#f6f7fc] to-[#f6f7fc] dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
       <div className="container px-5 py-24 mx-auto">
         <motion.div 

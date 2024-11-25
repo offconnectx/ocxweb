@@ -69,7 +69,13 @@ const AboutUs = () => {
     >
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
-          <motion.div 
+        <motion.div 
+          className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+          variants={itemVariants}
+        >
+
+       
+        <motion.div 
             className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last"
             variants={itemVariants}
             animate = {floatingAnimation}
@@ -96,6 +102,7 @@ const AboutUs = () => {
               src="/mock_4.png"
               alt="about Us image"
             />
+          </motion.div>
           </motion.div>
           
           <motion.div 

@@ -9,7 +9,6 @@ const Header = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
-  // Animation logic from Contact section
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -33,22 +32,7 @@ const Header = () => {
     }
   };
 
-  const buttonVariants = {
-    rest: { scale: 1 },
-    hover: { 
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    },
-    tap: { 
-      scale: 0.95,
-      transition: {
-        duration: 0.1
-      }
-    }
-  };
+
 
   const floatingAnimation = {
     y: [-10, 10],
