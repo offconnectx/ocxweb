@@ -36,7 +36,7 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.2 }}
       className="text-white dark:bg-[#244f6b] md:dark:bg-[#244f6b] bg-blue-600 body-font"
     >
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <div className=" max-w-screen-xl container px-6 py-8 mx-auto flex flex-wrap items-center justify-between sm:flex-row flex-col">
         <motion.a
           href="https://offconnect.io/"
           className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
