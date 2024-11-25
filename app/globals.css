@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Opens Sans, Montserrat, Lato;
+  font-family: Montserrat, Opens Sans, Lato;
 }
 
 @layer utilities {
