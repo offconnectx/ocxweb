@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const ContactUs = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const containerVariants = {
     hidden: { opacity: 1 },
