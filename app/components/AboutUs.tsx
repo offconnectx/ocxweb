@@ -30,19 +30,6 @@ const AboutUs = () => {
     }
   };
 
-  const imageVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
-
-
   const floatingAnimation = {
     y: [-10, 10],
     transition: {
@@ -55,15 +42,19 @@ const AboutUs = () => {
     }
   };
 
-
-  const featureVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
+  const buttonVariants = {
+    rest: { scale: 1 },
+    hover: { 
+      scale: 1.05,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.2,
+        ease: "easeInOut"
+      }
+    },
+    tap: { 
+      scale: 0.95,
+      transition: {
+        duration: 0.1
       }
     }
   };
@@ -80,21 +71,27 @@ const AboutUs = () => {
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
           <motion.div 
             className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last"
+            variants={itemVariants}
+            animate = {floatingAnimation}
+
           >
             <motion.div 
-              variants={imageVariants}
+              variants={itemVariants}
+              
               className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex"
             >
               <motion.img
-              animate={floatingAnimation}
-              className="rounded-xl md:w-10/12 w-1/2 object-cover"
+                className="rounded-xl md:w-10/12 w-1/2 object-cover"
                 src="/mock_3.png"
                 alt="about Us image"
+                variants={itemVariants}
+                // animate = {floatingAnimation}
+
               />
             </motion.div>
             <motion.img
-              variants={imageVariants}
-              animate={floatingAnimation}
+              variants={itemVariants}
+              // animate = {floatingAnimation}
               className="sm:ml-0 ml-auto md:w-10/12 w-1/2 rounded-xl object-cover"
               src="/mock_4.png"
               alt="about Us image"
@@ -127,8 +124,7 @@ const AboutUs = () => {
               
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
                 <motion.div 
-                  variants={featureVariants}
-                  whileHover={{ scale: 1.05 }}
+                  variants={itemVariants}
                   className="flex-col justify-center items-center gap-y-10"
                 >
                   <svg className="mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="52" height="52">
@@ -140,8 +136,7 @@ const AboutUs = () => {
                 </motion.div>
 
                 <motion.div 
-                  variants={featureVariants}
-                  whileHover={{ scale: 1.05 }}
+                  variants={itemVariants}
                   className="flex-col justify-center items-center inline-flex"
                 >
                   <svg className="mx-auto mb-4" fill="#000000" height="52px" width="52px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.5 229.5">
@@ -153,8 +148,7 @@ const AboutUs = () => {
                 </motion.div>
 
                 <motion.div 
-                  variants={featureVariants}
-                  whileHover={{ scale: 1.05 }}
+                  variants={itemVariants}
                   className="flex-col justify-center items-center inline-flex"
                 >
                   <svg className="mx-auto mb-4" version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" width="52px" height="52px" viewBox="0 0 32 32">
@@ -168,9 +162,10 @@ const AboutUs = () => {
             </div>
 
             <motion.button 
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              variants={buttonVariants}
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
               className="sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-800 dark:bg-[#4fb3ff] dark:hover:bg-[#0088cc] transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
             >
               <span className="px-4 text-white font-mono text-md font-semibold leading-8">
