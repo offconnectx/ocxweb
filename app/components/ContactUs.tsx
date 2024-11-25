@@ -134,7 +134,7 @@ const ContactUs = () => {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <span className="px-4 text-[#4681ee] font-mono text-md font-semibold leading-8">
+                <span className="px-4 text-[#4681ee] dark:text-[#f6f7fc] font-mono text-md font-semibold leading-8">
                   Send
                 </span>
               </motion.button>

@@ -175,7 +175,7 @@ const AboutUs = () => {
               whileTap="tap"
               className="sm:w-fit w-full px-3.5 py-2 bg-[#d6dcdc] hover:bg-[#f6f7fc] dark:bg-[#4fb3ff] dark:hover:bg-[#0088cc] transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
             >
-              <span className="px-4 text-white font-mono text-md font-semibold leading-8">
+              <span className="px-4 text-[#4681ee] dark:text-[#f6f7fc] font-mono text-md font-semibold leading-8">
                 Download
               </span>
             </motion.button>
