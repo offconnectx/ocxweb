@@ -12,17 +12,17 @@ const AboutUs = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2
+        staggerChildren: 0.2,
+        delayChildren: 0.3
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -31,16 +31,30 @@ const AboutUs = () => {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
-      scale: 1,
+      x: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         ease: "easeOut"
       }
     }
   };
+
+
+  const floatingAnimation = {
+    y: [-10, 10],
+    transition: {
+      y: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut"
+      }
+    }
+  };
+
 
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -72,15 +86,15 @@ const AboutUs = () => {
               className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex"
             >
               <motion.img
-                whileHover={{ scale: 1.05 }}
-                className="rounded-xl md:w-10/12 w-1/2 object-cover"
+              animate={floatingAnimation}
+              className="rounded-xl md:w-10/12 w-1/2 object-cover"
                 src="/mock_3.png"
                 alt="about Us image"
               />
             </motion.div>
             <motion.img
               variants={imageVariants}
-              whileHover={{ scale: 1.05 }}
+              animate={floatingAnimation}
               className="sm:ml-0 ml-auto md:w-10/12 w-1/2 rounded-xl object-cover"
               src="/mock_4.png"
               alt="about Us image"

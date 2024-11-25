@@ -74,11 +74,11 @@ const Features = () => {
           <motion.p 
             className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto dark:text-[#c4d4e0]"
           >
-            {`'In today's hyper-connected world`}
+            {`In today's hyper-connected world `}
             <span className="font-semibold dark:text-[#00b4d8] text-blue-500">
               OffConnectX
             </span>
-            {`stands out by enabling transactions without the need for internet access. 
+            {` stands out by enabling transactions without the need for internet access. 
             This innovation tackles some of the most frustrating issues users face, such as the ones listed below:`}
           </motion.p>
         </motion.div>

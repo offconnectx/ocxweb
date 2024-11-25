@@ -10,14 +10,13 @@ const Header = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
-
   const containerVariants = {
-    hidden: { opacity: 1},
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        delayChildren: 0.3
       }
     }
   };

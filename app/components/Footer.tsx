@@ -7,17 +7,14 @@ const Footer = () => {
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const containerVariants = {
-    hidden: { opacity: 1, y: 20 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
   };
 
   const itemVariants = {
