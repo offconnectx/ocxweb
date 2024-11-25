@@ -108,10 +108,10 @@ const AboutUs = () => {
                 className="w-full flex-col justify-start lg:items-start items-center gap-3 flex"
               >
                 <h2 className="dark:text-[#c4d4e0] text-blue-800 text-xl font-semibold font-mono leading-normal lg:text-start text-center">
-                  Why OffConnectX?
+                  {`Why OffConnectX?`}
                 </h2>
                 <h2 className="dark:text-[#f0f4f8] text-gray-900 text-4xl font-bold font-mono leading-normal lg:text-start text-center">
-                  Redefining Offline Payments
+                  {`Redefining Offline Payments`}
                 </h2>
                 <p className="dark:text-white text-gray-500 text-base font-mono leading-relaxed lg:text-start text-center">
                   {`OffConnectX allows users to perform secure financial transactions even

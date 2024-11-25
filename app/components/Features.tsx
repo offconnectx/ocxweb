@@ -18,23 +18,11 @@ const Features = () => {
     }
   };
 
-  const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const featureVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
       opacity: 1,
-      x: 0,
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -53,7 +41,6 @@ const Features = () => {
 
   return (
     <motion.section
-
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
@@ -63,15 +50,17 @@ const Features = () => {
     >
       <div className="container px-5 py-24 mx-auto">
         <motion.div 
-          variants={headerVariants}
+          variants={itemVariants}
           className="text-center mb-20"
         >
           <motion.h1 
+            variants={itemVariants}
             className="sm:text-3xl text-2xl font-medium text-center title-font dark:text-[#c4d4e0] text-gray-900 mb-4"
           >
-            Our Features: Revolutionizing Offline Transactions
+            {`Our Features: Revolutionizing Offline Transactions`}
           </motion.h1>
           <motion.p 
+            variants={itemVariants}
             className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto dark:text-[#c4d4e0]"
           >
             {`In today's hyper-connected world `}
@@ -90,21 +79,18 @@ const Features = () => {
           {features.map((feature, index) => (
             <motion.div 
               key={index}
-              variants={featureVariants}
+              variants={itemVariants}
               className="p-2 sm:w-1/2 w-full"
             >
               <motion.div 
                 whileHover={{ 
-                  scale: 1.02,
+                  scale: 1.05,
                   transition: { duration: 0.2 }
                 }}
-                whileTap={{ scale: 0.98 }}
+                whileTap={{ scale: 0.95 }}
                 className="dark:bg-[#00a0c0] bg-blue-100 rounded flex p-4 h-full items-center cursor-pointer"
               >
-                <motion.svg
-                  initial={{ rotate: 0 }}
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
+                <svg
                   fill="none"
                   stroke="currentColor"
                   strokeLinecap="round"
@@ -115,13 +101,10 @@ const Features = () => {
                 >
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                   <path d="M22 4L12 14.01l-3-3"></path>
-                </motion.svg>
-                <motion.span 
-                  className="title-font font-medium dark:text-white"
-                  whileHover={{ scale: 1.05 }}
-                >
+                </svg>
+                <span className="title-font font-medium dark:text-white">
                   {feature}
-                </motion.span>
+                </span>
               </motion.div>
             </motion.div>
           ))}

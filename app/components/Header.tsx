@@ -5,11 +5,11 @@ import Link from "next/link";
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-
 const Header = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
+  // Animation logic from Contact section
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -22,24 +22,30 @@ const Header = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5
+        duration: 0.5,
+        ease: "easeOut"
       }
     }
   };
 
-  const imageVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
+  const buttonVariants = {
+    rest: { scale: 1 },
+    hover: { 
+      scale: 1.05,
       transition: {
-        duration: 0.8,
-        ease: "easeOut"
+        duration: 0.2,
+        ease: "easeInOut"
+      }
+    },
+    tap: { 
+      scale: 0.95,
+      transition: {
+        duration: 0.1
       }
     }
   };
@@ -57,18 +63,17 @@ const Header = () => {
   };
 
   return (
-    <div
-    
-    ref={sectionRef}
-    className="w-full bg-gradient-to-b from-white to-blue-400 dark:from-[#356f91] dark:to-[#244f6b] transition-colors duration-300"
-  >
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      className="flex flex-col md:flex-row items-center justify-between mx-auto md:max-w-6xl py-8 md:py-24 gap-y-10 md:gap-x-10 pt-32 md:pt-24" 
+    <section 
+      ref={sectionRef}
+      className="text-gray-600 body-font overflow-hidden bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
-      <div className="flex flex-col gap-y-6 md:gap-y-10 text-center md:text-left px-4 md:px-0 lg:mb-16">
+      <motion.div
+      className="flex flex-col md:flex-row items-center justify-between mx-auto md:max-w-6xl py-8 md:py-24 gap-y-10 md:gap-x-10 pt-32 md:pt-24" 
+      initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={containerVariants}
+      >
+         <div className="flex flex-col gap-y-6 md:gap-y-10 text-center md:text-left px-4 md:px-0 lg:mb-16">
         <motion.p
           variants={itemVariants}
           className="text-3xl md:text-5xl font-mono font-bold dark:text-[#f0f4f8] mt-8 md:mt-0" 
@@ -98,21 +103,42 @@ const Header = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          variants={imageVariants}
-          animate={floatingAnimation}
-          className="md:w-full w-10/12"
+        <motion.div 
+          className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+          variants={itemVariants}
         >
-          <Image
-            height={500}
-            width={500}
-            src="/mock_1.png"
-            alt="App Mockup"
-            className="lg:mt-10"
-          />
+          <motion.div 
+            className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last"
+            variants={itemVariants}
+            animate = {floatingAnimation}
+
+          >
+            <motion.div 
+              variants={itemVariants}
+              
+              className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex"
+            >
+              <motion.img
+                className="rounded-xl md:w-10/12 w-1/2 object-cover"
+                src="/mock_3.png"
+                alt="about Us image"
+                variants={itemVariants}
+                // animate = {floatingAnimation}
+
+              />
+            </motion.div>
+            <motion.img
+              variants={itemVariants}
+              // animate = {floatingAnimation}
+              className="sm:ml-0 ml-auto md:w-10/12 w-1/2 rounded-xl object-cover"
+              src="/mock_4.png"
+              alt="about Us image"
+            />
+          </motion.div>
+          
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
