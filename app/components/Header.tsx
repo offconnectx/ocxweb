@@ -65,7 +65,7 @@ const Header = () => {
   return (
     <section 
       ref={sectionRef}
-      className="text-gray-600 body-font overflow-hidden bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
+      className="text-gray-600 body-font overflow-hidden bg-gradient-to-b from-[#f6f7fc] to-[#f6f7fc] dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
       <motion.div
       className="flex flex-col md:flex-row items-center justify-between mx-auto md:max-w-6xl py-8 md:py-24 gap-y-10 md:gap-x-10 pt-32 md:pt-24" 

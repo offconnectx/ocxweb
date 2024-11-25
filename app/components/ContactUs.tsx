@@ -51,7 +51,7 @@ const ContactUs = () => {
     <section 
       ref={sectionRef}
       id="contact" 
-      className="text-gray-600 bg-gradient-to-b from-white to-blue-400 dark:from-[#244f6b] dark:to-[#356f91] body-font relative transition-colors duration-300"
+      className="text-[#4681ee] bg-gradient-to-b from-[#4681ee] to-[#4681ee] dark:from-[#244f6b] dark:to-[#356f91] body-font relative transition-colors duration-300"
     >
       <motion.div 
         className="container px-5 py-24 mx-auto"
@@ -63,10 +63,10 @@ const ContactUs = () => {
           className="flex flex-col text-center w-full mb-12"
           variants={itemVariants}
         >
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-[#f0f4f8]">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#f6f7fc] dark:text-[#f0f4f8]">
             Contact Us
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base dark:text-[#c4d4e0]">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-[#f6f7fc] dark:text-[#c4d4e0]">
             {`We'd Love to Hear From You!`}
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ const ContactUs = () => {
               variants={itemVariants}
             >
               <div className="relative">
-                <label htmlFor="name" className="leading-7 text-sm text-gray-600 dark:text-[#f0f4f8]">
+                <label htmlFor="name" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
                   Name
                 </label>
                 <input 
@@ -95,7 +95,7 @@ const ContactUs = () => {
               variants={itemVariants}
             >
               <div className="relative">
-                <label htmlFor="email" className="leading-7 text-sm text-gray-600 dark:text-[#f0f4f8]">
+                <label htmlFor="email" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
                   Email
                 </label>
                 <input 
@@ -112,7 +112,7 @@ const ContactUs = () => {
               variants={itemVariants}
             >
               <div className="relative">
-                <label htmlFor="message" className="leading-7 text-sm text-gray-600 dark:text-[#f0f4f8]">
+                <label htmlFor="message" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
                   Message
                 </label>
                 <textarea 
@@ -128,13 +128,13 @@ const ContactUs = () => {
               variants={itemVariants}
             >
               <motion.button 
-                className="flex mx-auto sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-800 dark:bg-[#4fb3ff] dark:hover:bg-[#0088cc] rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center"
+                className="flex mx-auto sm:w-fit w-full px-3.5 py-2 bg-[#f6f7fc] hover:bg-[#d6dcdc] dark:bg-[#4fb3ff] dark:hover:bg-[#0088cc] rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center"
                 variants={buttonVariants}
                 initial="rest"
                 whileHover="hover"
                 whileTap="tap"
               >
-                <span className="px-4 text-white font-mono text-md font-semibold leading-8">
+                <span className="px-4 text-[#4681ee] font-mono text-md font-semibold leading-8">
                   Send
                 </span>
               </motion.button>
