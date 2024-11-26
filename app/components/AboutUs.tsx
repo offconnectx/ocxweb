@@ -65,49 +65,14 @@ const AboutUs = () => {
       animate={isInView ? "visible" : "hidden"}
       ref={sectionRef}
       variants={containerVariants}
-      className="py-24 relative  bg-gradient-to-b from-[#4681ee] to-[#4681ee] dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
+      className="py-24 relative bg-gradient-to-b from-[#4681ee] to-[#4681ee] dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
-        <motion.div 
-          className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
-          variants={itemVariants}
-        >
-
-       
-        <motion.div 
-            className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last"
-            variants={itemVariants}
-            animate = {floatingAnimation}
-
-          >
-            <motion.div 
-              variants={itemVariants}
-              
-              className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex"
-            >
-              <motion.img
-                className="rounded-xl md:w-10/12 w-1/2 object-cover"
-                src="/mock_3.png"
-                alt="about Us image"
-                variants={itemVariants}
-                // animate = {floatingAnimation}
-
-              />
-            </motion.div>
-            <motion.img
-              variants={itemVariants}
-              // animate = {floatingAnimation}
-              className="sm:ml-0 ml-auto md:w-10/12 w-1/2 rounded-xl object-cover"
-              src="/mock_4.png"
-              alt="about Us image"
-            />
-          </motion.div>
-          </motion.div>
           
           <motion.div 
             variants={containerVariants}
-            className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex"
+            className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex order-1 lg:order-2"
           >
             <div className="w-full flex-col justify-center items-start gap-8 flex">
               <motion.div 
@@ -134,7 +99,7 @@ const AboutUs = () => {
                   variants={itemVariants}
                   className="flex-col justify-center items-center gap-y-10"
                 >
-                  <svg className="mx-auto mb-4"  xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="52" height="52"><path d="M23.56,23.56c-.29,.29-.68,.44-1.06,.44s-.77-.15-1.06-.44L.44,2.56C-.15,1.97-.15,1.03,.44,.44S1.97-.15,2.56,.44l3.64,3.64c5.86-2.27,12.63-.87,17.11,3.6,.09,.09,.18,.18,.27,.28,.57,.6,.55,1.55-.05,2.12-.29,.28-.66,.42-1.04,.42-.4,0-.79-.16-1.09-.46l-.22-.22c-3.32-3.32-8.18-4.55-12.62-3.35l3.55,3.55c2.34,.04,4.58,.97,6.24,2.63,.59,.58,.59,1.54,0,2.12-.29,.29-.67,.44-1.05,.44l6.24,6.24c.59,.59,.59,1.54,0,2.12Zm-11.56-6.56c-1.1,0-2,.9-2,2s.9,2,2,2,2-.9,2-2-.9-2-2-2Zm-6-4.71c-.12,.11-.24,.22-.36,.34-.59,.58-.59,1.53,0,2.12,.29,.29,.68,.44,1.06,.44s.77-.15,1.06-.44c.08-.08,.16-.16,.24-.23,.62-.55,.67-1.5,.12-2.12-.55-.62-1.5-.67-2.12-.12ZM.97,7.41c-.1,.09-.19,.18-.28,.27-.09,.09-.18,.19-.27,.28-.57,.6-.55,1.55,.05,2.12,.29,.28,.66,.42,1.04,.42,.4,0,.79-.16,1.09-.46l.45-.45c.6-.57,.63-1.52,.06-2.12s-1.52-.63-2.12-.06Z"/></svg>
+                  <svg className="mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="52" height="52"><path d="M23.56,23.56c-.29,.29-.68,.44-1.06,.44s-.77-.15-1.06-.44L.44,2.56C-.15,1.97-.15,1.03,.44,.44S1.97-.15,2.56,.44l3.64,3.64c5.86-2.27,12.63-.87,17.11,3.6,.09,.09,.18,.18,.27,.28,.57,.6,.55,1.55-.05,2.12-.29,.28-.66,.42-1.04,.42-.4,0-.79-.16-1.09-.46l-.22-.22c-3.32-3.32-8.18-4.55-12.62-3.35l3.55,3.55c2.34,.04,4.58,.97,6.24,2.63,.59,.58,.59,1.54,0,2.12-.29,.29-.67,.44-1.05,.44l6.24,6.24c.59,.59,.59,1.54,0,2.12Zm-11.56-6.56c-1.1,0-2,.9-2,2s.9,2,2,2,2-.9,2-2-.9-2-2-2Zm-6-4.71c-.12,.11-.24,.22-.36,.34-.59,.58-.59,1.53,0,2.12,.29,.29,.68,.44,1.06,.44s.77-.15,1.06-.44c.08-.08,.16-.16,.24-.23,.62-.55,.67-1.5,.12-2.12-.55-.62-1.5-.67-2.12-.12ZM.97,7.41c-.1,.09-.19,.18-.28,.27-.09,.09-.18,.19-.27,.28-.57,.6-.55,1.55,.05,2.12,.29,.28,.66,.42,1.04,.42,.4,0,.79-.16,1.09-.46l.45-.45c.6-.57,.63-1.52,.06-2.12s-1.52-.63-2.12-.06Z"/></svg>
 
                   <h6 className="dark:text-[#c4d4e0] text-[#f6f7fc] text-base font-mono leading-relaxed">
                     Offline Payments
@@ -178,6 +143,35 @@ const AboutUs = () => {
                 Download
               </span>
             </motion.button>
+          </motion.div>
+
+          <motion.div 
+            className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 order-2 lg:order-1"
+            variants={itemVariants}
+          >
+            <motion.div 
+              className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1"
+              variants={itemVariants}
+              animate={floatingAnimation}
+            >
+              <motion.div 
+                variants={itemVariants}
+                className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex"
+              >
+                <motion.img
+                  className="rounded-xl md:w-10/12 w-1/2 object-cover"
+                  src="/mock_3.png"
+                  alt="about Us image"
+                  variants={itemVariants}
+                />
+              </motion.div>
+              <motion.img
+                variants={itemVariants}
+                className="sm:ml-0 ml-auto md:w-10/12 w-1/2 rounded-xl object-cover"
+                src="/mock_4.png"
+                alt="about Us image"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
