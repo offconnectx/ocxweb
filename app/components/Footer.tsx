@@ -87,7 +87,7 @@ const Footer = () => {
           </motion.a>
 
           <motion.a 
-            href="#" 
+            href="https://www.linkedin.com/company/offconnectx/" 
             className="ml-3 text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-300" 
             variants={itemVariants}
           >

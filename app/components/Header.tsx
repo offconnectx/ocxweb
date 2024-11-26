@@ -49,6 +49,7 @@ const Header = () => {
   return (
     <section 
       ref={sectionRef}
+      id="home"
       className="text-gray-600 body-font overflow-hidden bg-gradient-to-b from-[#f6f7fc] to-[#f6f7fc] dark:from-[#244f6b] dark:to-[#356f91] transition-colors duration-300"
     >
       <motion.div
