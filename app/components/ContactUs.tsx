@@ -1,11 +1,15 @@
 "use client"
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
-const ContactUs = () => {
-  const sectionRef = useRef(null);
+const ContactUs: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 1 },
@@ -47,6 +51,53 @@ const ContactUs = () => {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!formRef.current) {
+      console.error('Form reference is not available');
+      setSubmitStatus('An error occurred. Please try again.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY as string;
+    console.log('Service ID:', serviceId, 'Template ID:', templateId, 'Public Key:', publicKey);
+
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('EmailJS environment variables are not properly configured');
+      setSubmitStatus('Configuration error. Please contact support.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const result = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        formRef.current,
+        publicKey
+      );
+
+      if (result.text === 'OK') {
+        setSubmitStatus('Message sent successfully!');
+        formRef.current.reset();
+      } else {
+        setSubmitStatus('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setSubmitStatus('An error occurred. Please try again later.');
+      console.error('EmailJS Error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section 
       ref={sectionRef}
@@ -72,19 +123,20 @@ const ContactUs = () => {
         </motion.div>
 
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
-          <div className="flex flex-wrap -m-2">
+          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-wrap -m-2">
             <motion.div 
               className="p-2 w-1/2"
               variants={itemVariants}
             >
               <div className="relative">
-                <label htmlFor="name" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
+                <label htmlFor="user_name" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
                   Name
                 </label>
                 <input 
                   type="text" 
-                  id="name" 
-                  name="name" 
+                  id="user_name" 
+                  name="user_name" 
+                  required
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -95,13 +147,14 @@ const ContactUs = () => {
               variants={itemVariants}
             >
               <div className="relative">
-                <label htmlFor="email" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
+                <label htmlFor="user_email" className="leading-7 text-sm text-[#f6f7fc] dark:text-[#f0f4f8]">
                   Email
                 </label>
                 <input 
                   type="email" 
-                  id="email" 
-                  name="email" 
+                  id="user_email" 
+                  name="user_email" 
+                  required
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -118,24 +171,38 @@ const ContactUs = () => {
                 <textarea 
                   id="message" 
                   name="message" 
+                  required
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
             </motion.div>
+
+            {submitStatus && (
+              <motion.div 
+                className="p-2 w-full text-center"
+                variants={itemVariants}
+              >
+                <p className={`text-sm ${submitStatus.includes('success') ? 'text-green-500' : 'text-red-500'}`}>
+                  {submitStatus}
+                </p>
+              </motion.div>
+            )}
 
             <motion.div 
               className="p-2 w-full"
               variants={itemVariants}
             >
               <motion.button 
-                className="flex mx-auto sm:w-fit w-full px-3.5 py-2 bg-[#f6f7fc] hover:bg-[#d6dcdc] dark:bg-[#4fb3ff] dark:hover:bg-[#0088cc] rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center"
+                type="submit"
+                disabled={isSubmitting}
+                className="flex mx-auto sm:w-fit w-full px-3.5 py-2 bg-[#f6f7fc] hover:bg-[#d6dcdc] dark:bg-[#4fb3ff] dark:hover:bg-[#0088cc] rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed"
                 variants={buttonVariants}
                 initial="rest"
                 whileHover="hover"
                 whileTap="tap"
               >
                 <span className="px-4 text-[#4681ee] dark:text-[#f6f7fc] font-mono text-md font-semibold leading-8">
-                  Send
+                  {isSubmitting ? 'Sending...' : 'Send'}
                 </span>
               </motion.button>
             </motion.div>
@@ -145,7 +212,7 @@ const ContactUs = () => {
               variants={itemVariants}
             >
             </motion.div>
-          </div>
+          </form>
         </div>
       </motion.div>
     </section>

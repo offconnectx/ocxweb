@@ -39,3 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 <!-- npm i --save-dev @types/react-scroll -->
 <!-- npm install framer-motion -->
+<!-- npm install @emailjs/browser -->
