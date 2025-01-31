@@ -25,7 +25,7 @@ const GooglePlayDownloadButton = () => {
         </svg>
       </div>
       <div>
-        <div className="text-xs">GET IT ON</div>
+        <div className="text-xs">Coming soon</div>
         <div className="-mt-1 font-sans text-xl font-semibold">Google Play</div>
       </div>
     </button>
